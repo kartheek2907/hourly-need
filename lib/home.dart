@@ -13,7 +13,7 @@ List<dynamic> subCat = List<dynamic>();
 List<String> subCatList = List<String>();
 int cInd = 0, sInd = 0, sCount = 0;
 String searchText = '', name = '', phone = '', address = '', location = '';
-bool manual = true, auto = false, searching = false, work = false, active = false;
+bool manual = true, auto = false, searching = false, work = false, active = false, searchByDist = true, searchByRat = false;
 Position curLoc;
 String curAdd = 'Loading...';
 String hNo = '', street = '', city = '', state = '', country = '', zip = '';
@@ -1504,6 +1504,60 @@ class _ListShowState extends State<ListShow> {
                     searchText = value;
                   });
                 },
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    'Sort by',
+                    style: Theme.of(context).textTheme.headline5,
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'Distance',
+                        style: Theme.of(context).textTheme.headline5,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Checkbox(
+                        activeColor: Theme.of(context).colorScheme.primary,
+                        value: searchByDist,
+                        onChanged: (val) {
+                          setState(() {
+                            searchByDist = val;
+                            searchByRat = false;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'Rating',
+                        style: Theme.of(context).textTheme.headline5,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Checkbox(
+                        activeColor: Theme.of(context).colorScheme.primary,
+                        value: searchByRat,
+                        onChanged: (val) {
+                          setState(() {
+                            searchByRat = val;
+                            searchByDist = false;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
             Container(
