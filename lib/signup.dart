@@ -257,9 +257,6 @@ class _SignUpState extends State<SignUp> {
     await auth.verifyPhoneNumber(
       phoneNumber: phone,
       verificationCompleted: (AuthCredential credential) {
-        Fluttertoast.showToast(
-          msg: 'Requesting OTP',
-        );
         print(credential);
       },
       verificationFailed: (FirebaseAuthException exception) {
@@ -267,8 +264,14 @@ class _SignUpState extends State<SignUp> {
         setState(() {
           errorMessage = exception.message;
         });
+        Fluttertoast.showToast(
+          msg: exception.message,
+        );
       },
       codeSent: (String verId, [int resendCode]) {
+        Fluttertoast.showToast(
+          msg: 'Requesting OTP',
+        );
         setState(() {
           verificationId = verId;
           canGo = true;
