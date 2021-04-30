@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "134719460373",
+    "project_id": "hourly-need-570e1",
+    "storage_bucket": "hourly-need-570e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134719460373:android:e0f1129b8385e9377c6a1c",
+        "android_client_info": {
+          "package_name": "org.hourlyneed.hourly_need"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134719460373-8erf0fans3gbvmm24hsfeilvl5omsu7b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.hourlyneed.hourly_need",
+            "certificate_hash": "cc17ab14e604e1e017bcfe9fae007a1a23788d84"
+          }
+        },
+        {
+          "client_id": "134719460373-uh6r8r09bofj6qqn6rihdcmk8q82s94e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.hourlyneed.hourly_need",
+            "certificate_hash": "53f93cfee2540887b3c9b432210f882a3eb51e6e"
+          }
+        },
+        {
+          "client_id": "134719460373-gs6jvvucir0nrnvjdle61d8aarhjoivi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSH8SuI0QMqsN_X4vc3ljVfKWiFoTnoRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134719460373-gs6jvvucir0nrnvjdle61d8aarhjoivi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
