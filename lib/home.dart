@@ -1527,8 +1527,8 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {
-                            setState(() async{
+                          onTap: () async{
+                            setState(() {
                               orderId = tServices[tServices.length - 1 - index]['id'].toString();
                               orderDate = display;
                               orderFrom = tServices[tServices.length - 1 - index]['service_provider'].toString();
