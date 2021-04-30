@@ -1123,7 +1123,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {
+                          onTap: () async{
                             setState(() {
                               orderId = ordersData[ordersData.length - 1 - index]['id'].toString();
                               orderDate = display;
@@ -1528,14 +1528,14 @@ class _HomeState extends State<Home> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            setState(() {
+                            setState(() async{
                               orderId = tServices[tServices.length - 1 - index]['id'].toString();
                               orderDate = display;
                               orderFrom = tServices[tServices.length - 1 - index]['service_provider'].toString();
                               orderTo = tServices[tServices.length - 1 - index]['user'].toString();
                             });
                             await getOrderItems(orderId);
-                            await saveAsPDF(orderId, orderDate, orderFrom, orderTo)
+                            await saveAsPDF(orderId, orderDate, orderFrom, orderTo);
                           },
                           child: Container(
                             width: MediaQuery.of(context).size.width/2 - 9,
@@ -1771,7 +1771,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {
+                          onTap: () async{
                             setState(() {
                               orderId = servicesData[servicesData.length - 1 - index]['id'].toString();
                               orderDate = display;
@@ -1779,7 +1779,7 @@ class _HomeState extends State<Home> {
                               orderTo = servicesData[servicesData.length - 1 - index]['user'].toString();
                             });
                             await getOrderItems(orderId);
-                            await saveAsPDF(orderId, orderDate, orderFrom, orderTo)
+                            await saveAsPDF(orderId, orderDate, orderFrom, orderTo);
                           },
                           child: Container(
                             width: MediaQuery.of(context).size.width/2 - 9,
